@@ -1,5 +1,22 @@
+@import '~reset-css';
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 html {
     background-color: fuchsia;
+    scroll-behavior: smooth;
 }
 
 body {
