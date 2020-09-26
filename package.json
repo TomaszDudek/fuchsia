@@ -1,0 +1,47 @@
+{
+  "name": "fuchsia",
+  "version": "1.0.0",
+  "author": "Tomasz Dudek",
+  "description": "Basic website and components templates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomaszDudek/fuchsia"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --colors",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "fuchsia",
+    "webpack",
+    "template",
+    "hmr",
+    "sass"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.11.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^7.0.2",
+    "css-hot-loader": "^1.4.4",
+    "css-loader": "4.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "9.0.3",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {}
+}
