@@ -17,7 +17,9 @@
     "webpack",
     "template",
     "hmr",
-    "sass"
+    "sass",
+    "darkmode",
+    "svg"
   ],
   "license": "ISC",
   "devDependencies": {
