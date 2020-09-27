@@ -35,3 +35,10 @@ body {
         fill: lighten(black, 90%);
     }
 }
+
+.icon {
+    float: left; // todo: remove this is just for demo!
+    height: auto;
+    margin: 1rem; // todo: remove this is just for demo!
+    width: 128px;
+}

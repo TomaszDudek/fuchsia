@@ -19,3 +19,6 @@ Note: Use a node version <= 12
 
 ## Favicon
 Please find favicon configuration docs under: https://github.com/jantimon/favicons-webpack-plugin
+
+## SVGs
+Details for svg sprite configuration: https://github.com/cascornelissen/svg-spritemap-webpack-plugin/blob/master/docs/options.md
