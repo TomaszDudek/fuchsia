@@ -16,3 +16,6 @@ Note: Use a node version <= 12
 - ES6 support
 - Sass support
 - Hot Module Reload - browser reloads whenever a js or scss file changes
+
+## Favicon
+Please find favicon configuration docs under: https://github.com/jantimon/favicons-webpack-plugin
