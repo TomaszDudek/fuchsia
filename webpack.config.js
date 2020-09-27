@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
@@ -50,6 +51,7 @@ module.exports = {
       // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
-    })
+    }),
+    new FaviconsWebpackPlugin('./app/assets/favicon.svg')
   ]
 };
