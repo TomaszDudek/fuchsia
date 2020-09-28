@@ -1,0 +1,52 @@
+:root {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    @include font($f-text-primary);
+
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    font-variant-ligatures: no-common-ligatures;
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1.5em;
+}

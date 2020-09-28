@@ -1,0 +1,37 @@
+$font-family: 'Nunito', sans-serif;
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito Light'), local('Nunito-Light'),
+    url('assets/fonts/Nunito-Light.woff2') format('woff2'),
+    url('assets/fonts/Nunito-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito Light Italic'), local('Nunito-LightItalic'),
+    url('assets/fonts/Nunito-LightItalic.woff2') format('woff2'),
+    url('assets/fonts/Nunito-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+    url('assets/fonts/Nunito-Regular.woff2') format('woff2'),
+    url('assets/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito Italic'), local('Nunito-Italic'),
+    url('assets/fonts/Nunito-Italic.woff2') format('woff2'),
+    url('assets/fonts/Nunito-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}

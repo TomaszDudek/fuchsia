@@ -1,0 +1,18 @@
+@mixin font($font) {
+    @each $breakpoint, $property-map in $font {
+        @if $breakpoint == 'default' {
+            @include write-font-properties($property-map);
+        }
+        @else {
+            @media (min-width: $breakpoint) {
+                @include write-font-properties($property-map);
+            }
+        }
+    }
+}
+
+@mixin write-font-properties($property-map) {
+    @each $property, $value in $property-map {
+        #{$property}: $value;
+    }
+}

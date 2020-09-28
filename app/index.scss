@@ -1,18 +1,8 @@
 @import '~reset-css';
+@import 'styles/typography';
+@import 'styles/mixin/mixin.loader';
+@import 'styles/reset';
 
-* {
-    &,
-    &:after,
-    &:before {
-        box-sizing: border-box;
-    }
-}
-
-html,
-body {
-    height: 100%;
-    overflow-x: hidden;
-}
 
 html {
     background-color: fuchsia;
@@ -27,7 +17,6 @@ body {
     background-color: white;
     color: black;
     fill: black;
-    font-family: sans-serif;
 
     @media (prefers-color-scheme: dark) {
         background-color: darken(white, 90%);
@@ -36,9 +25,35 @@ body {
     }
 }
 
+.h1 {
+    @include font($f-headline-primary);
+}
+
+.h2 {
+    @include font($f-headline-secondary)
+}
+
 .icon {
     float: left; // todo: remove this is just for demo!
     height: auto;
     margin: 1rem; // todo: remove this is just for demo!
     width: 128px;
+}
+
+.page-section {
+    @include clearfix;
+
+    width: 100%;
+
+    &--small {
+        padding: 1rem 0;
+    }
+
+    &--medium {
+        padding: 2rem 0;
+    }
+
+    &--large {
+        padding: 3rem 0;
+    }
 }
