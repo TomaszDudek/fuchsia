@@ -4,11 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+const WildcardsEntryWebpackPlugin = require('wildcards-entry-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
 module.exports = {
-  entry: './app/index.js',
+  entry: WildcardsEntryWebpackPlugin.entry('./app/components/**/*.component.*', {app: './app/index.js'}),
 
   mode: env,
 
