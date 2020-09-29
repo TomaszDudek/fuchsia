@@ -6,8 +6,8 @@
 
 * {
     &,
-    &:after,
-    &:before {
+    &::after,
+    &::before {
         box-sizing: border-box;
     }
 }
@@ -20,7 +20,7 @@ body {
 
 html {
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -39,7 +39,7 @@ h4,
 h5,
 h6 {
     display: block;
-    margin-bottom: 0.25em;
+    margin-bottom: .25em;
 }
 
 b,

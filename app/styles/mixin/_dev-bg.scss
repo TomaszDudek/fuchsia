@@ -27,11 +27,12 @@
 }
 
 @mixin striped-background($color) {
-    background: repeating-linear-gradient(
-                    45deg,
-                    rgba($color, .0125),
-                    rgba($color, .0125) 10px,
-                    rgba($color, .05) 10px,
-                    rgba($color, .05) 20px
-    );
+    background:
+        repeating-linear-gradient(
+            45deg,
+            rgba($color, .0125),
+            rgba($color, .0125) 10px,
+            rgba($color, .05) 10px,
+            rgba($color, .05) 20px
+        );
 }
