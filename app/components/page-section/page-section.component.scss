@@ -1,0 +1,19 @@
+@import 'app/styles/mixin/mixin.loader';
+
+.page-section {
+    @include clearfix;
+
+    width: 100%;
+
+    &--small {
+        padding: 1rem 0;
+    }
+
+    &--medium {
+        padding: 2rem 0;
+    }
+
+    &--large {
+        padding: 3rem 0;
+    }
+}

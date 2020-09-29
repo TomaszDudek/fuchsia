@@ -1,10 +1,5 @@
-@import '~reset-css';
-@import '~breakpoint-sass';
-@import 'styles/breakpoints';
-@import 'styles/typography';
-@import 'styles/mixin/mixin.loader';
-@import 'styles/reset';
-
+@import './styles/font-face';
+@import './styles/common-dependencys';
 
 html {
     background-color: fuchsia;
@@ -33,44 +28,4 @@ body {
 
 .h2 {
     @include font($f-headline-secondary)
-}
-
-.icon {
-    height: auto;
-    width: 128px;
-}
-
-.page-section {
-    @include clearfix;
-
-    width: 100%;
-
-    &--small {
-        padding: 1rem 0;
-    }
-
-    &--medium {
-        padding: 2rem 0;
-    }
-
-    &--large {
-        padding: 3rem 0;
-    }
-}
-
-.container {
-    @include clearfix;
-    @include dev-bg;
-
-    padding: 0 15px;
-
-    @include breakpoint($bp-phone-landscape-min) {
-        margin: 0 auto;
-        max-width: 75vw;
-        padding: 0;
-    }
-
-    @include breakpoint($bp-tablet-portrait-min) {
-        max-width: 80vw;
-    }
 }

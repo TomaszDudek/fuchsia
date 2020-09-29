@@ -1,0 +1,17 @@
+@import './app/styles/common-dependencys';
+
+.container {
+    @include clearfix;
+    @include dev-bg;
+
+    padding: 0 15px;
+
+    @include breakpoint($bp-phone-landscape-min) {
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+
+    @include breakpoint($bp-tablet-portrait-min) {
+        max-width: 80vw;
+    }
+}
