@@ -1,4 +1,6 @@
 @import '~reset-css';
+@import '~breakpoint-sass';
+@import 'styles/breakpoints';
 @import 'styles/typography';
 @import 'styles/mixin/mixin.loader';
 @import 'styles/reset';
@@ -34,9 +36,7 @@ body {
 }
 
 .icon {
-    float: left; // todo: remove this is just for demo!
     height: auto;
-    margin: 1rem; // todo: remove this is just for demo!
     width: 128px;
 }
 
@@ -55,5 +55,22 @@ body {
 
     &--large {
         padding: 3rem 0;
+    }
+}
+
+.container {
+    @include clearfix;
+    @include dev-bg;
+
+    padding: 0 15px;
+
+    @include breakpoint($bp-phone-landscape-min) {
+        margin: 0 auto;
+        max-width: 75vw;
+        padding: 0;
+    }
+
+    @include breakpoint($bp-tablet-portrait-min) {
+        max-width: 80vw;
     }
 }

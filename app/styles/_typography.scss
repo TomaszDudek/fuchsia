@@ -7,11 +7,11 @@ $f-headline-primary: (
                 line-height: 2.5rem,
                 font-weight: normal,
         ),
-        500px: (
+        $bp-tablet-portrait-min: (
                 font-size: 2.5rem,
                 line-height: 3.125rem,
         ),
-        700px: (
+        $bp-desktop-small-min: (
                 font-size: 4.125rem,
                 line-height: 4.5rem,
         )
@@ -24,11 +24,11 @@ $f-headline-secondary: (
                 line-height: 40px,
                 font-weight: 300,
         ),
-        500px: (
+        $bp-tablet-portrait-min: (
                 font-size: 40px,
                 line-height: 50px,
         ),
-        700px: (
+        $bp-desktop-small-min: (
                 font-size: 50px,
                 line-height: 1.5em,
         )
@@ -41,10 +41,10 @@ $f-text-primary: (
                 line-height: 1.5em,
                 font-weight: normal,
         ),
-        500px: (
+        $bp-tablet-portrait-min: (
                 font-size: 1.25rem,
         ),
-        700px: (
+        $bp-desktop-small-min: (
                 font-size: 1.35rem,
         )
 );

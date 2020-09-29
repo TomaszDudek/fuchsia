@@ -31,6 +31,7 @@
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "breakpoint-sass": "^2.7.1",
     "cross-env": "^7.0.2",
     "css-hot-loader": "^1.4.4",
     "css-loader": "4.2.0",

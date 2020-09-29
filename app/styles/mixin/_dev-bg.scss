@@ -1,0 +1,37 @@
+@mixin dev-bg() {
+    @include striped-background(red);
+
+    @include breakpoint($bp-phone-landscape-min) {
+        @include striped-background(green);
+    }
+
+    @include breakpoint($bp-tablet-portrait-min) {
+        @include striped-background(blue);
+    }
+
+    @include breakpoint($bp-tablet-landscape-min) {
+        @include striped-background(cyan);
+    }
+
+    @include breakpoint($bp-desktop-small-min) {
+        @include striped-background(magenta);
+    }
+
+    @include breakpoint($bp-desktop-large-min) {
+        @include striped-background(yellow);
+    }
+
+    @include breakpoint($bp-desktop-extra-large-min) {
+        @include striped-background(black);
+    }
+}
+
+@mixin striped-background($color) {
+    background: repeating-linear-gradient(
+                    45deg,
+                    rgba($color, .0125),
+                    rgba($color, .0125) 10px,
+                    rgba($color, .05) 10px,
+                    rgba($color, .05) 20px
+    );
+}
