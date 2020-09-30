@@ -1,4 +1,9 @@
+@import './app/styles/common-dependencys';
+
 .unordered-list {
-    color: cyan;
+    $text-color: $c-secondary;
+
+    color: $text-color;
     list-style: disc inside;
+    margin-bottom: 1em;
 }

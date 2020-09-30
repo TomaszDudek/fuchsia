@@ -1,0 +1,74 @@
+// //////////////////////////////////////////////////////////////////////////
+// VALIDATION / RESPONSE / NOTE / COLORS
+// //////////////////////////////////////////////////////////////////////////
+$c-response-success: #3adb76;
+$c-response-warning: #ffae00;
+$c-response-error: #cc4b37;
+
+// //////////////////////////////////////////////////////////////////////////
+// BLACK / WHITE / GRAY
+// //////////////////////////////////////////////////////////////////////////
+$c-white: #fff;
+
+$c-white--15: rgba($c-white, .15);
+$c-white--25: rgba($c-white, .25);
+$c-white--50: rgba($c-white, .5);
+$c-white--75: rgba($c-white, .75);
+$c-white--85: rgba($c-white, .85);
+
+$c-black: #000;
+
+$c-black--15: rgba($c-black, .15);
+$c-black--25: rgba($c-black, .25);
+$c-black--50: rgba($c-black, .5);
+$c-black--75: rgba($c-black, .75);
+$c-black--85: rgba($c-black, .85);
+
+$c-gray: #7f7f7f;
+
+$c-gray--15: rgba($c-gray, .15);
+$c-gray--25: rgba($c-gray, .25);
+$c-gray--50: rgba($c-gray, .5);
+$c-gray--75: rgba($c-gray, .75);
+$c-gray--85: rgba($c-gray, .85);
+
+$c-gray--darker: darken($c-gray, 20%);
+$c-gray--dark: darken($c-gray, 10%);
+$c-gray--light: lighten($c-gray, 10%);
+$c-gray--lighter: lighten($c-gray, 20%);
+
+// //////////////////////////////////////////////////////////////////////////
+// MAIN COLORS
+// //////////////////////////////////////////////////////////////////////////
+$c-primary: fuchsia;
+
+$c-primary--15: rgba($c-primary, .15);
+$c-primary--25: rgba($c-primary, .25);
+$c-primary--50: rgba($c-primary, .5);
+$c-primary--75: rgba($c-primary, .75);
+$c-primary--85: rgba($c-primary, .85);
+
+$c-primary--darker: darken($c-primary, 20%);
+$c-primary--dark: darken($c-primary, 10%);
+$c-primary--light: lighten($c-primary, 10%);
+$c-primary--lighter: lighten($c-primary, 20%);
+
+$c-secondary: cyan;
+
+$c-secondary--15: rgba($c-secondary, .15);
+$c-secondary--25: rgba($c-secondary, .25);
+$c-secondary--50: rgba($c-secondary, .5);
+$c-secondary--75: rgba($c-secondary, .75);
+$c-secondary--85: rgba($c-secondary, .85);
+
+$c-secondary--darker: darken($c-secondary, 20%);
+$c-secondary--dark: darken($c-secondary, 10%);
+$c-secondary--light: lighten($c-secondary, 10%);
+$c-secondary--lighter: lighten($c-secondary, 20%);
+
+// //////////////////////////////////////////////////////////////////////////
+// TONES
+// //////////////////////////////////////////////////////////////////////////
+// For color tones we will use color names. Reason and generator find under:
+// https://davidwalsh.name/sass-color-variables-dont-suck
+// http://chir.ag/projects/name-that-color/#6195ED

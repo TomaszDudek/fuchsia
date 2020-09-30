@@ -1,4 +1,8 @@
+@import './app/styles/common-dependencys';
+
 .text-link {
-    color: greenyellow;
+    $text-color: $c-primary;
+
+    color: $text-color;
     text-decoration: underline;
 }

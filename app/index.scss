@@ -29,3 +29,209 @@ body {
 .h2 {
     @include font($f-headline-secondary);
 }
+
+.h3 {
+    @include font($f-headline-secondary-tertiary);
+}
+
+.example-color-list {
+    $item-spacing: .5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -$item-spacing;
+    margin-right: -$item-spacing;
+
+    &__item {
+        @include font($f-text-primary--small);
+
+        align-items: center;
+        border-radius: 2px;
+        box-shadow: 0 0 13px $c-black--15;
+        display: flex;
+        flex: 1 0 auto;
+        height: 5vw;
+        justify-content: center;
+        margin: $item-spacing;
+        min-height: 3rem;
+        white-space: nowrap;
+
+        &--black {
+            background-color: $c-black;
+            color: $c-white;
+        }
+
+        &--white {
+            background-color: $c-white;
+        }
+
+        &--gray {
+            background-color: $c-gray;
+        }
+
+        &--primary {
+            background-color: $c-primary;
+        }
+
+        &--secondary {
+            background-color: $c-secondary;
+        }
+
+        // alpha black
+        &--black-15 {
+            background-color: $c-black--15;
+        }
+
+        &--black-25 {
+            background-color: $c-black--25;
+        }
+
+        &--black-50 {
+            background-color: $c-black--50;
+        }
+
+        &--black-75 {
+            background-color: $c-black--75;
+        }
+
+        &--black-85 {
+            background-color: $c-black--85;
+        }
+
+        // alpha white
+        &--white-15 {
+            background-color: $c-white--15;
+        }
+
+        &--white-25 {
+            background-color: $c-white--25;
+        }
+
+        &--white-50 {
+            background-color: $c-white--50;
+        }
+
+        &--white-75 {
+            background-color: $c-white--75;
+        }
+
+        &--white-85 {
+            background-color: $c-white--85;
+        }
+
+        // alpha gray
+        &--gray-15 {
+            background-color: $c-gray--15;
+        }
+
+        &--gray-25 {
+            background-color: $c-gray--25;
+        }
+
+        &--gray-50 {
+            background-color: $c-gray--50;
+        }
+
+        &--gray-75 {
+            background-color: $c-gray--75;
+        }
+
+        &--gray-85 {
+            background-color: $c-gray--85;
+        }
+
+        // alpha primary
+        &--primary-15 {
+            background-color: $c-primary--15;
+        }
+
+        &--primary-25 {
+            background-color: $c-primary--25;
+        }
+
+        &--primary-50 {
+            background-color: $c-primary--50;
+        }
+
+        &--primary-75 {
+            background-color: $c-primary--75;
+        }
+
+        &--primary-85 {
+            background-color: $c-primary--85;
+        }
+
+        // alpha secoundary
+        &--secondary-15 {
+            background-color: $c-secondary--15;
+        }
+
+        &--secondary-25 {
+            background-color: $c-secondary--25;
+        }
+
+        &--secondary-50 {
+            background-color: $c-secondary--50;
+        }
+
+        &--secondary-75 {
+            background-color: $c-secondary--75;
+        }
+
+        &--secondary-85 {
+            background-color: $c-secondary--85;
+        }
+
+        // variations gray
+        &--gray-lighter {
+            background-color: $c-gray--lighter;
+        }
+
+        &--gray-light {
+            background-color: $c-gray--light;
+        }
+
+        &--gray-dark {
+            background-color: $c-gray--dark;
+        }
+
+        &--gray-darker {
+            background-color: $c-gray--darker;
+        }
+
+        // variations primary
+        &--primary-lighter {
+            background-color: $c-primary--lighter;
+        }
+
+        &--primary-light {
+            background-color: $c-primary--light;
+        }
+
+        &--primary-dark {
+            background-color: $c-primary--dark;
+        }
+
+        &--primary-darker {
+            background-color: $c-primary--darker;
+        }
+
+        // variation secondary
+        &--secondary-lighter {
+            background-color: $c-secondary--lighter;
+        }
+
+        &--secondary-light {
+            background-color: $c-secondary--light;
+        }
+
+        &--secondary-dark {
+            background-color: $c-secondary--dark;
+        }
+
+        &--secondary-darker {
+            background-color: $c-secondary--darker;
+        }
+    }
+}
