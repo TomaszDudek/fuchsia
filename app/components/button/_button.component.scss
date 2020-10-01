@@ -15,6 +15,16 @@ $button-default-border-color--hover: darken($button-default-border-color, 5%);
 $button-default-background-color--hover: darken($button-default-background-color, 3%);
 $button-default-text-color--hover: darken($button-default-text-color, 5%);
 
+// button default -- dark-mode
+$button-default-border-color--dark-mode: $c-primary--dark;
+$button-default-background-color--dark-mode: $c-black--15;
+$button-default-text-color--dark-mode: $c-primary--dark;
+
+// button default -- dark-mode -- hover state
+$button-default-border-color--hover--dark-mode: lighten($button-default-border-color, 5%);
+$button-default-background-color--hover--dark-mode: $c-black--25;
+$button-default-text-color--hover--dark-mode: lighten($button-default-text-color, 5%);
+
 // button primary
 $button-primary-border-color: darken($c-primary, 5%);
 $button-primary-background-color: $c-primary;
@@ -24,6 +34,16 @@ $button-primary-text-color: $c-white;
 $button-primary-border-color--hover: darken($button-primary-border-color, 5%);
 $button-primary-background-color--hover: darken($button-primary-background-color, 5%);
 $button-primary-text-color--hover: $c-white;
+
+// button primary -- dark-mode
+$button-primary-border-color--dark-mode: darken($c-primary--darker, 5%);
+$button-primary-background-color--dark-mode: $c-primary--darker;
+$button-primary-text-color--dark-mode: $c-white--85;
+
+// button primary -- dark-mode -- hover state
+$button-primary-border-color--hover--dark-mode: darken($button-primary-border-color, 5%);
+$button-primary-background-color--hover--dark-mode: darken($button-primary-background-color, 5%);
+$button-primary-text-color--hover--dark-mode: $c-white--85;
 
 .button {
     // todo: think about a button mixin
@@ -52,6 +72,8 @@ $button-primary-text-color--hover: $c-white;
     white-space: nowrap;
     width: auto;
     -webkit-user-drag: none; // for further information check: http://stackoverflow.com/questions/15034842/what-is-the-webkit-user-drag-css-property
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 
     &:hover,
     &:focus {
@@ -63,6 +85,10 @@ $button-primary-text-color--hover: $c-white;
         background-image: none;
         box-shadow: inset 1px 2px 5px rgba($c-black, .125);
         outline: 0;
+
+        @media (prefers-color-scheme: dark) {
+            box-shadow: inset 1px 2px 5px $c-white--25;
+        }
     }
 
     // button default style
@@ -78,6 +104,18 @@ $button-primary-text-color--hover: $c-white;
         color: $button-default-text-color--hover;
     }
 
+    @media (prefers-color-scheme: dark) {
+        background-color: $button-default-background-color--dark-mode;
+        border-color: $button-default-border-color--dark-mode;
+        color: $button-default-text-color--dark-mode;
+
+        &:hover {
+            background-color: $button-default-background-color--hover--dark-mode;
+            border-color: $button-default-border-color--hover--dark-mode;
+            color: $button-default-text-color--hover--dark-mode;
+        }
+    }
+
     // button primary style
     &--primary {
         background-color: $button-primary-background-color;
@@ -88,6 +126,18 @@ $button-primary-text-color--hover: $c-white;
             background-color: $button-primary-background-color--hover;
             border-color: $button-primary-border-color--hover;
             color: $button-primary-text-color--hover;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $button-primary-background-color--dark-mode;
+            border-color: $button-primary-border-color--dark-mode;
+            color: $button-primary-text-color--dark-mode;
+
+            &:hover {
+                background-color: $button-primary-background-color--hover--dark-mode;
+                border-color: $button-primary-border-color--hover--dark-mode;
+                color: $button-primary-text-color--hover--dark-mode;
+            }
         }
     }
 
