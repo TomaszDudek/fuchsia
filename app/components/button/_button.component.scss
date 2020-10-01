@@ -1,0 +1,107 @@
+@import './app/styles/common-dependencys';
+
+$button-padding: 1em;
+$button-border-radius: 2px;
+
+$t-button: border 137ms ease, background 137ms ease, color 137ms ease;
+
+// button default
+$button-default-border-color: $c-primary;
+$button-default-background-color: $c-white;
+$button-default-text-color: $c-primary;
+
+// button default -- hover state
+$button-default-border-color--hover: darken($button-default-border-color, 5%);
+$button-default-background-color--hover: darken($button-default-background-color, 3%);
+$button-default-text-color--hover: darken($button-default-text-color, 5%);
+
+// button primary
+$button-primary-border-color: darken($c-primary, 5%);
+$button-primary-background-color: $c-primary;
+$button-primary-text-color: $c-white;
+
+// button primary -- hover state
+$button-primary-border-color--hover: darken($button-primary-border-color, 5%);
+$button-primary-background-color--hover: darken($button-primary-background-color, 5%);
+$button-primary-text-color--hover: $c-white;
+
+.button {
+    // todo: think about a button mixin
+    // common button styles
+    @include font($f-button);
+
+    align-items: center;
+    appearance: none;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border-radius: $button-border-radius;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 3px 3px 2px rgba($c-black, .15);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding: $button-padding;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+    -webkit-user-drag: none; // for further information check: http://stackoverflow.com/questions/15034842/what-is-the-webkit-user-drag-css-property
+
+    &:hover,
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    &:active {
+        background-image: none;
+        box-shadow: inset 1px 2px 5px rgba($c-black, .125);
+        outline: 0;
+    }
+
+    // button default style
+    background-color: $button-default-background-color;
+    border-color: $button-default-border-color;
+    color: $button-default-text-color;
+    text-shadow: 1px 1px 1px rgba($c-black, .25);
+    transition: $t-button;
+
+    &:hover {
+        background-color: $button-default-background-color--hover;
+        border-color: $button-default-border-color--hover;
+        color: $button-default-text-color--hover;
+    }
+
+    // button primary style
+    &--primary {
+        background-color: $button-primary-background-color;
+        border-color: $button-primary-border-color;
+        color: $button-primary-text-color;
+
+        &:hover {
+            background-color: $button-primary-background-color--hover;
+            border-color: $button-primary-border-color--hover;
+            color: $button-primary-text-color--hover;
+        }
+    }
+
+    // button size variations
+    &--small {
+        padding: $button-padding - .5;
+    }
+
+    &--large {
+        padding: $button-padding + .5;
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+}

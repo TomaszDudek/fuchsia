@@ -1,9 +1,15 @@
-@import 'app/styles/mixin/mixin.loader';
+@import './app/styles/common-dependencys';
 
 .page-section {
+    $decorative-background-color: $c-gray--15;
+
     @include clearfix;
 
     width: 100%;
+
+    &--decorative {
+        background-color: $decorative-background-color;
+    }
 
     &--small {
         padding: 1rem 0;
