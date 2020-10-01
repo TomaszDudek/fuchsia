@@ -1,12 +1,11 @@
-import {Component} from 'component-loader-js';
+import { Component } from 'component-loader-js';
 
 class OrderedList extends Component {
-
   constructor() {
     super(...arguments);
     this.countChild();
     this.el.addEventListener('click', (e) => {
-      this.publish('orderedlist::custom::event', e)
+      this.publish('orderedlist::custom::event', e);
     });
   }
 

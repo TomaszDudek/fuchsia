@@ -1,7 +1,6 @@
-import {Component} from 'component-loader-js';
+import { Component } from 'component-loader-js';
 
 class UnOrderedList extends Component {
-
   constructor() {
     super(...arguments);
     this.countChild();
