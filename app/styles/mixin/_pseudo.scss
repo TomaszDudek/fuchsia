@@ -1,0 +1,14 @@
+@mixin pseudo ($content-position: 'after', $relative: true, $content: '') {
+
+    @if $relative == true {
+        position: relative;
+    }
+
+    &::#{$content-position} {
+        content: $content;
+        display: block;
+        position: absolute;
+
+        @content;
+    }
+}

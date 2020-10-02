@@ -1,38 +1,39 @@
+@import '../breakpoints';
+
+$map-breakpoint-colors: (
+    default: red,
+    $bp-phone-landscape-min: green,
+    $bp-tablet-portrait-min: blue,
+    $bp-tablet-landscape-min: cyan,
+    $bp-desktop-small-min: magenta,
+    $bp-desktop-large-min: yellow,
+    $bp-desktop-extra-large-min: black,
+);
+
 @mixin dev-bg() {
-    @include striped-background(red);
-
-    @include breakpoint($bp-phone-landscape-min) {
-        @include striped-background(green);
-    }
-
-    @include breakpoint($bp-tablet-portrait-min) {
-        @include striped-background(blue);
-    }
-
-    @include breakpoint($bp-tablet-landscape-min) {
-        @include striped-background(cyan);
-    }
-
-    @include breakpoint($bp-desktop-small-min) {
-        @include striped-background(magenta);
-    }
-
-    @include breakpoint($bp-desktop-large-min) {
-        @include striped-background(yellow);
-    }
-
-    @include breakpoint($bp-desktop-extra-large-min) {
-        @include striped-background(black);
+    @each $breakpoint, $color in $map-breakpoint-colors {
+        @if $breakpoint == 'default' {
+            @include striped-background($color);
+        }
+        @else {
+            @include breakpoint($breakpoint) {
+                @include striped-background($color);
+            }
+        }
     }
 }
 
 @mixin striped-background($color) {
+    $alpha: .0125;
+    $beta: .05;
+    $distance: 8px;
+
     background:
         repeating-linear-gradient(
-            45deg,
-            rgba($color, .0125),
-            rgba($color, .0125) 10px,
-            rgba($color, .05) 10px,
-            rgba($color, .05) 20px
+            -45deg,
+            rgba($color, $alpha),
+            rgba($color, $alpha) $distance,
+            rgba($color, $beta) $distance,
+            rgba($color, $beta) ($distance * 2),
         );
 }

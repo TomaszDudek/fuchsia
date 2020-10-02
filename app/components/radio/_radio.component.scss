@@ -1,0 +1,78 @@
+@import './app/styles/common-dependencys';
+
+$radio-size: 18px;
+//$radio-size: 25px;
+
+$c-radio-label: $c-black;
+$c-input-border-color: $c-black;
+$c-radio-background-color: $c-white;
+$c-radio-background-color--checked: $c-primary;
+
+$t-radio-transition: background-color 125ms ease, box-shadow 300ms ease;
+
+$map-input-states: (
+    has-success: $c-response-success,
+    has-warning: $c-response-warning,
+    has-error: $c-response-error
+);
+
+// dark-mode variables
+$c-radio-label--dark-mode: $c-white--50;
+$c-input-border-color--dark-mode: $c-white--50;
+$c-radio-background-color--dark-mode: $c-black--50;
+$c-radio-background-color--checked--dark-mode: $c-primary--darker;
+
+.radio {
+    margin-bottom: 1em;
+
+    &__label {
+        @include pseudo() {
+            background-color: $c-radio-background-color;
+            border-radius: 100%;
+            border: 1px solid $c-input-border-color;
+            color: $c-radio-label;
+            height: $radio-size;
+            left: 0;
+            top: 0;
+            transition: $t-radio-transition;
+            width: $radio-size;
+
+            @include dark-mode() {
+                background-color: $c-radio-background-color--dark-mode;
+                border-color: $c-input-border-color--dark-mode;
+            }
+        }
+
+        @include font($f-input-label);
+
+        display: block;
+        padding-left: $radio-size + 7px;
+        line-height: $radio-size;
+        cursor: pointer;
+
+        @include dark-mode() {
+            color: $c-radio-label--dark-mode;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + .radio__label {
+            @include pseudo() {
+                background-color: $c-radio-background-color--checked;
+                box-shadow: inset 0 0 0 .185em $c-radio-background-color;
+
+                @include dark-mode() {
+                    background-color: $c-radio-background-color--checked--dark-mode;
+                    box-shadow: inset 0 0 0 .185em $c-radio-background-color--dark-mode;
+                }
+            }
+
+            text-shadow: 0 0 3px rgba($c-primary--darker, .5);
+        }
+    }
+
+    // validation states
+    @include validation-states-for('radio', $map-input-states);
+}

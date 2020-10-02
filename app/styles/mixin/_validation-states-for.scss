@@ -1,0 +1,13 @@
+@mixin validation-states-for($input-type, $map) {
+    @each $state, $color in $map {
+        &--#{$state} {
+            .#{$input-type}__label {
+                color: $color;
+
+                &::after {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+}
