@@ -1,0 +1,48 @@
+@import './app/styles/common-dependencys';
+
+// todo: create / optimize responsive behavior
+$gear-size: 200px;
+$pull-right-bottom: -90px;
+
+.gear {
+    bottom: $pull-right-bottom;
+    height: $gear-size;
+    position: fixed;
+    right: $pull-right-bottom;
+    width: $gear-size;
+    cursor: pointer;
+
+    &__cog {
+        position: absolute;
+        border-radius: .51em;
+
+        &--small {
+            width: 30%;
+            height: 30%;
+            z-index: 3;
+        }
+
+        &--medium {
+            width: 50%;
+            height: 50%;
+            opacity: .5;
+            fill: $c-primary;
+            z-index: 2;
+
+            @include dark-mode {
+                fill: $c-primary--darker;
+            }
+        }
+
+        &--large {
+            width: 100%;
+            height: 100%;
+            opacity: .1;
+            z-index: 1;
+        }
+
+        .icon {
+            width: 100%;
+        }
+    }
+}
