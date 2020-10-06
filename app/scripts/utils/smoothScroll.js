@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 export const smoothScroll = (target, duration = 1000) => {
   const scrollTarget = document.querySelector(target);
   const scrollTargetPosition = scrollTarget.offsetTop;

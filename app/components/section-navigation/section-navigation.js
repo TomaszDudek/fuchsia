@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import { Component } from 'component-loader-js';
-import { smoothScroll } from '../../scripts/utils/smoothScroll';
+import { smoothScroll } from '../../scripts/utils/export-star';
 
 class SectionNavigation extends Component {
   constructor() {
