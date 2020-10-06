@@ -1,0 +1,11 @@
+@import './app/styles/common-dependencys';
+
+.section-navigation {
+    @include dev-bg;
+
+    position: fixed;
+    right: 0;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+}

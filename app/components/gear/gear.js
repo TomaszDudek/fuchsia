@@ -13,8 +13,7 @@ class Gear extends Component {
     this.scrollTop();
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  getScrollInDeg() {
+  getScrollInDeg = () => {
     const h = document.documentElement;
     const b = document.body;
     const st = 'scrollTop';
@@ -22,7 +21,7 @@ class Gear extends Component {
 
     // eslint-disable-next-line no-mixed-operators
     return (b[st] / (b[sh] - h.clientHeight)) * 360;
-  }
+  };
 
   scrollTop() {
     this.el.addEventListener('click', (e) => {
@@ -34,6 +33,7 @@ class Gear extends Component {
         document.body.scroll(0, i);
         i -= 30;
         if (i <= 0) {
+          document.body.scroll(0, 0);
           clearInterval(int);
         }
       }, 2);

@@ -16,8 +16,8 @@
 
 <section class="page-section page-section--medium">
     <div class="container">
-        <div class="section__header">
-            <h2 class="h2">Project colors</h2>
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">Project colors</h2>
         </div>
         <h3 class="h3">Basic colors</h3>
         <ul class="example-color-list">
@@ -95,6 +95,9 @@
 
 <section class="page-section page-section--medium">
     <div class="container">
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">General typography</h2>
+        </div>
         <h1 class="h1">Überschrift erster Ordnung</h1>
         <h2 class="h2">Überschrift zweiter Ordnung</h2>
         <h3 class="h3">Überschrift dritter Ordnung</h3>
@@ -220,6 +223,9 @@
 
 <section class="page-section page-section--medium">
     <div class="container">
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">SVGS used from Sprite</h2>
+        </div>
         <svg class="icon" viewbox="0 0 32 32">
             <use xlink:href="#sprite-icon_menu_toggle"></use>
         </svg>
@@ -261,8 +267,8 @@
 
 <section class="page-section page-section--medium page-section--decorative">
     <div class="container">
-        <div class="section__header">
-            <h2 class="h2">Input Elements</h2>
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">Buttons</h2>
         </div>
         <h3 class="h3">Button styles</h3>
         <p>
@@ -300,8 +306,8 @@
 
 <section class="page-section page-section--medium">
     <div class="container">
-        <div class="section__header">
-            <h2 class="h2">Input Section</h2>
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">Input elements</h2>
         </div>
         <h3 class="h3">Input fields</h3>
         <div class="input">
@@ -354,7 +360,14 @@
             <input class="checkbox__input" type="checkbox" id="input_checkbox_3">
             <label class="checkbox__label" for="input_checkbox_3">Checkbox label</label>
         </div>
-        <h2 class="h2">Response states</h2>
+    </div>
+</section>
+
+<section class="page-section page-section--medium">
+    <div class="container">
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">Response states</h2>
+        </div>
         <div class="input input--has-success">
             <label class="input__label" for="input_type_text_success">With sucsess</label>
             <input class="input__field" id="input_type_text_success" type="text" placeholder="type text">
@@ -367,8 +380,40 @@
             <label class="input__label" for="input_type_text_error">With error</label>
             <input class="input__field" id="input_type_text_error" type="text" placeholder="type text">
         </div>
+        <h3 class="h3">Radio Buttons</h3>
+        <div class="radio radio--has-success">
+            <input class="radio__input" type="radio" id="input_radio_12" name="radio_button_group" checked="">
+            <label class="radio__label" for="input_radio_12">Radio label</label>
+        </div>
+        <div class="radio radio--has-warning">
+            <input class="radio__input" type="radio" id="input_radio_22" name="radio_button_group">
+            <label class="radio__label" for="input_radio_22">Radio label</label>
+        </div>
+        <div class="radio radio--has-error">
+            <input class="radio__input" type="radio" id="input_radio_32" name="radio_button_group">
+            <label class="radio__label" for="input_radio_32">Radio label</label>
+        </div>
+        <h3 class="h3">Checkbox</h3>
+        <div class="checkbox checkbox--has-success">
+            <input class="checkbox__input" type="checkbox" id="input_checkbox_12" checked="">
+            <label class="checkbox__label" for="input_checkbox_12">Checkbox label</label>
+        </div>
+        <div class="checkbox checkbox--has-warning">
+            <input class="checkbox__input" type="checkbox" id="input_checkbox_22">
+            <label class="checkbox__label" for="input_checkbox_22">Checkbox label</label>
+        </div>
+        <div class="checkbox checkbox--has-error">
+            <input class="checkbox__input" type="checkbox" id="input_checkbox_32">
+            <label class="checkbox__label" for="input_checkbox_32">Checkbox label</label>
+        </div>
     </div>
 </section>
+
+<div class="section-navigation" data-component="SectionNavigation">
+    <nav class="section-navigation__nav">
+        <ul class="section-navigation__list"></ul>
+    </nav>
+</div>
 
 <div class="gear" data-component="Gear">
     <div class="gear__cog gear__cog--small">
