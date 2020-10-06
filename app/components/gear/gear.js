@@ -1,4 +1,3 @@
-/* eslint-env browser */
 import { Component } from 'component-loader-js';
 import { smoothScroll } from '../../scripts/utils/export-star';
 
@@ -6,9 +5,7 @@ class Gear extends Component {
   constructor() {
     super(...arguments);
 
-    const { body } = document;
-
-    body.addEventListener('scroll', () => {
+    this.subscribe('scrollSpy::custom::event', () => {
       this.rotateCogs();
     });
     this.scrollTop();

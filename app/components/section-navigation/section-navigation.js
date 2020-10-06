@@ -6,6 +6,10 @@ class SectionNavigation extends Component {
   constructor() {
     super(...arguments);
     this.setNavigationItems(this.getTitles());
+
+    this.subscribe('scrollSpy::custom::event', (data) => {
+      // console.log('data', data);
+    });
   }
 
   getTitles = () => document.getElementsByClassName('page-section__title');
