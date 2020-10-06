@@ -1,5 +1,6 @@
 /* eslint-env browser */
 import { Component } from 'component-loader-js';
+import { smoothScroll } from '../../scripts/utils/smoothScroll';
 
 class SectionNavigation extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class SectionNavigation extends Component {
     link.innerHTML = text;
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      this.smoothScroll(e.target.hash);
+      smoothScroll(e.target.hash);
     });
 
     item.classList.add('section-navigation__item');
@@ -49,41 +50,6 @@ class SectionNavigation extends Component {
     const id = `${string}`;
     return id.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
   };
-
-  // todo: make this reusable
-  smoothScroll = (target, duration = 1000) => {
-    const scrollTarget = document.querySelector(target);
-    const scrollTargetPositon = scrollTarget.offsetTop;
-    const scrollStartPosition = document.body.scrollTop;
-    const scrollDistance = scrollTargetPositon - scrollStartPosition;
-    let startTime = null;
-
-    // source: http://gizma.com/easing/
-    function ease(t, b, c, d) {
-      /* eslint-disable */
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-      /* eslint-enable */
-    }
-
-    function animation(currentTime) {
-      if (startTime === null) {
-        startTime = currentTime;
-      }
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, scrollStartPosition, scrollDistance, duration);
-
-      document.body.scroll(0, run);
-
-      if (timeElapsed < duration) {
-        window.requestAnimationFrame(animation);
-      }
-    }
-
-    window.requestAnimationFrame(animation);
-  }
 
   destroy() {
     super.destroy();

@@ -1,5 +1,6 @@
 /* eslint-env browser */
 import { Component } from 'component-loader-js';
+import { smoothScroll } from '../../scripts/utils/smoothScroll';
 
 class Gear extends Component {
   constructor() {
@@ -26,17 +27,7 @@ class Gear extends Component {
   scrollTop() {
     this.el.addEventListener('click', (e) => {
       e.preventDefault();
-
-      let i = document.body.scrollTop;
-      // todo: think about animating the scroll by request animation frame
-      const int = setInterval(() => {
-        document.body.scroll(0, i);
-        i -= 30;
-        if (i <= 0) {
-          document.body.scroll(0, 0);
-          clearInterval(int);
-        }
-      }, 2);
+      smoothScroll('#body');
     });
   }
 
