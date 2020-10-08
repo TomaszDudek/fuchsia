@@ -17,7 +17,6 @@ class Gear extends Component {
     const st = 'scrollTop';
     const sh = 'scrollHeight';
 
-    // eslint-disable-next-line no-mixed-operators
     return (b[st] / (b[sh] - h.clientHeight)) * 360;
   };
 

@@ -1,11 +1,66 @@
 @import './app/styles/common-dependencys';
 
 .section-navigation {
-    @include dev-bg;
-
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    left: auto;
     position: fixed;
     right: 0;
     text-align: right;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    padding-right: 2vw;
+    transition: all 350ms ease;
+    pointer-events: none;
+
+    &__list {
+        pointer-events: auto;
+        transition: all 650ms ease;
+    }
+
+    &__item {
+        align-items: center;
+        border-right: 4px solid $c-primary;
+        display: flex;
+        height: 4px;
+        justify-content: flex-end;
+        margin: 8px 0;
+        opacity: .45;
+        padding: 0 10px 0 0;
+        transition: opacity 200ms ease, height 650ms ease;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        @include font($f-text-primary);
+
+        line-height: 1;
+        opacity: 0;
+        text-decoration: none;
+        transition: opacity 300ms ease;
+
+        &:hover {
+            color: $c-primary;
+        }
+
+        .active & {
+            color: $c-primary;
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        background: linear-gradient(to left, rgba(black, .3), rgba(black, 0));
+
+        .section-navigation__item {
+            height: auto;
+        }
+
+        .section-navigation__link {
+            opacity: .75;
+        }
+    }
 }

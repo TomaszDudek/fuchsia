@@ -1,4 +1,3 @@
-/* eslint-env browser */
 import { Component } from 'component-loader-js';
 import { smoothScroll } from '../../scripts/utils/export-star';
 
@@ -7,12 +6,39 @@ class SectionNavigation extends Component {
     super(...arguments);
     this.setNavigationItems(this.getTitles());
 
-    this.subscribe('scrollSpy::custom::event', (data) => {
-      // console.log('data', data);
+    const sectionMargin = 200;
+    let currentActive = 0;
+    const sections = this.getTitles();
+    const navigationItems = document.querySelectorAll('.section-navigation__item');
+
+    this.subscribe('scrollSpy::custom::event', () => {
+      // eslint-disable-next-line max-len
+      const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - sectionMargin) - 1;
+      if (current !== currentActive) {
+        this.removeAllActive(navigationItems, sections);
+        currentActive = current;
+        this.makeActive(navigationItems, current);
+      }
     });
   }
 
-  getTitles = () => document.getElementsByClassName('page-section__title');
+  makeActive = (menuLinks, link) => {
+    menuLinks[link].classList.add('active');
+  }
+
+  removeActive = (menuLinks, link) => {
+    menuLinks[link].classList.remove('active');
+  };
+
+  removeAllActive = (menuLinks, sections) => {
+    [...Array(sections.length).keys()].forEach((link) => {
+      this.removeActive(menuLinks, link);
+    });
+  }
+
+  getTitles = () => {
+    return document.getElementsByClassName('page-section__title');
+  }
 
   setNavigationItems = (items) => {
     const targetList = document.getElementsByClassName('section-navigation__list')[0];
