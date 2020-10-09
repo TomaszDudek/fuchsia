@@ -60,7 +60,7 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 .5em;
     max-width: 100%;
     overflow: hidden;
     padding: $button-padding;
@@ -70,15 +70,21 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    width: auto;
+    width: 100%;
     -webkit-user-drag: none; // for further information check: http://stackoverflow.com/questions/15034842/what-is-the-webkit-user-drag-css-property
     -webkit-touch-callout: none;
     -webkit-user-select: none;
 
-    &:hover,
-    &:focus {
-        outline: none;
-        text-decoration: none;
+    @include breakpoint($bp-phone-landscape-min) {
+        width: auto;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover,
+        &:focus {
+            outline: none;
+            text-decoration: none;
+        }
     }
 
     &:active {
@@ -98,10 +104,12 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
     text-shadow: 1px 1px 1px rgba($c-black, .25);
     transition: $t-button;
 
-    &:hover {
-        background-color: $button-default-background-color--hover;
-        border-color: $button-default-border-color--hover;
-        color: $button-default-text-color--hover;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: $button-default-background-color--hover;
+            border-color: $button-default-border-color--hover;
+            color: $button-default-text-color--hover;
+        }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -109,10 +117,12 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
         border-color: $button-default-border-color--dark-mode;
         color: $button-default-text-color--dark-mode;
 
-        &:hover {
-            background-color: $button-default-background-color--hover--dark-mode;
-            border-color: $button-default-border-color--hover--dark-mode;
-            color: $button-default-text-color--hover--dark-mode;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: $button-default-background-color--hover--dark-mode;
+                border-color: $button-default-border-color--hover--dark-mode;
+                color: $button-default-text-color--hover--dark-mode;
+            }
         }
     }
 
@@ -122,10 +132,12 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
         border-color: $button-primary-border-color;
         color: $button-primary-text-color;
 
-        &:hover {
-            background-color: $button-primary-background-color--hover;
-            border-color: $button-primary-border-color--hover;
-            color: $button-primary-text-color--hover;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: $button-primary-background-color--hover;
+                border-color: $button-primary-border-color--hover;
+                color: $button-primary-text-color--hover;
+            }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -133,10 +145,12 @@ $button-primary-text-color--hover--dark-mode: $c-white--85;
             border-color: $button-primary-border-color--dark-mode;
             color: $button-primary-text-color--dark-mode;
 
-            &:hover {
-                background-color: $button-primary-background-color--hover--dark-mode;
-                border-color: $button-primary-border-color--hover--dark-mode;
-                color: $button-primary-text-color--hover--dark-mode;
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: $button-primary-background-color--hover--dark-mode;
+                    border-color: $button-primary-border-color--hover--dark-mode;
+                    color: $button-primary-text-color--hover--dark-mode;
+                }
             }
         }
     }

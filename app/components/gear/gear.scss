@@ -1,8 +1,10 @@
 @import './app/styles/common-dependencys';
 
-// todo: create / optimize responsive behavior
-$gear-size: 200px;
-$pull-right-bottom: -90px;
+$gear-size: 100px;
+$pull-right-bottom: -50px;
+
+$gear-size--bp-desktop-small-min: 200px;
+$pull-right-bottom--bp-desktop-small-min: -90px;
 
 .gear {
     bottom: $pull-right-bottom;
@@ -12,6 +14,13 @@ $pull-right-bottom: -90px;
     width: $gear-size;
     cursor: pointer;
 
+    @include breakpoint($bp-desktop-small-min) {
+        bottom: $pull-right-bottom--bp-desktop-small-min;
+        height: $gear-size--bp-desktop-small-min;
+        right: $pull-right-bottom--bp-desktop-small-min;
+        width: $gear-size--bp-desktop-small-min;
+    }
+
     &__cog {
         position: absolute;
         border-radius: .51em;
@@ -20,6 +29,7 @@ $pull-right-bottom: -90px;
             width: 30%;
             height: 30%;
             z-index: 3;
+            //transition: transform 400ms ease-out;
         }
 
         &--medium {
@@ -28,6 +38,7 @@ $pull-right-bottom: -90px;
             opacity: .5;
             fill: $c-primary;
             z-index: 2;
+            //transition: transform 300ms ease-out;
 
             @include dark-mode {
                 fill: $c-primary--darker;
@@ -39,6 +50,7 @@ $pull-right-bottom: -90px;
             height: 100%;
             opacity: .1;
             z-index: 1;
+            // transition: transform 200ms ease-out;
         }
 
         .icon {

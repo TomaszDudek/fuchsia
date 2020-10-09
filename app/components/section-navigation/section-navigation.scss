@@ -25,9 +25,9 @@
         height: 4px;
         justify-content: flex-end;
         margin: 8px 0;
-        opacity: .45;
+        opacity: .35;
         padding: 0 10px 0 0;
-        transition: opacity 200ms ease, height 650ms ease;
+        transition: opacity 200ms ease, padding-top 300ms ease, padding-bottom 300ms ease;
 
         &.active {
             opacity: 1;
@@ -35,9 +35,8 @@
     }
 
     &__link {
-        @include font($f-text-primary);
+        @include font($f-text-secondary);
 
-        line-height: 1;
         opacity: 0;
         text-decoration: none;
         transition: opacity 300ms ease;
@@ -57,10 +56,12 @@
 
         .section-navigation__item {
             height: auto;
+            padding-bottom: 4px;
+            padding-top: 4px;
         }
 
         .section-navigation__link {
-            opacity: .75;
+            opacity: 1;
         }
     }
 }
