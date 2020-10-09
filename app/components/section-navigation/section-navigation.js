@@ -34,7 +34,14 @@ class SectionNavigation extends Component {
 
   makeActive = (menuLinks, link) => {
     menuLinks[link].classList.add('active');
+    this.highlightLink(menuLinks[link]);
   }
+
+  highlightLink = (link) => {
+    link = link.querySelector('.section-navigation__link');
+    link.classList.add('highlighted');
+    setTimeout(() => { link.classList.remove('highlighted'); }, 1000);
+  };
 
   removeActive = (menuLinks, link) => {
     menuLinks[link].classList.remove('active');

@@ -20,17 +20,17 @@
 
     &__item {
         align-items: center;
-        border-right: 4px solid $c-primary;
+        border-right: 4px solid $c-primary--25;
         display: flex;
         height: 4px;
         justify-content: flex-end;
         margin: 8px 0;
-        opacity: .35;
+        max-width: 135px;
         padding: 0 10px 0 0;
         transition: opacity 200ms ease, padding-top 300ms ease, padding-bottom 300ms ease;
 
         &.active {
-            opacity: 1;
+            border-right-color: $c-primary;
         }
     }
 
@@ -39,13 +39,14 @@
 
         opacity: 0;
         text-decoration: none;
-        transition: opacity 300ms ease;
+        transition: opacity 300ms ease, color 125ms ease;
+        color: $c-primary--50;
 
         &:hover {
             color: $c-primary;
         }
 
-        .active & {
+        &.highlighted {
             color: $c-primary;
             opacity: 1;
         }

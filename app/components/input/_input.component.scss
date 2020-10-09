@@ -28,7 +28,7 @@ $map-input-states: (
 );
 
 .input {
-    margin-bottom: 1em;
+    margin-bottom: calc(3vh + 1vw);
 
     &__label {
         @include font($f-input-label);
@@ -53,6 +53,7 @@ $map-input-states: (
         background-color: $c-input-background-color;
         border-color: $c-input-border-color;
         border-radius: $input-border-radius;
+        -webkit-border-radius: $input-border-radius;
         border-style: $input-border-style;
         border-width: $input-border-width;
         box-shadow: $input-box-shadow;
