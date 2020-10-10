@@ -39,11 +39,16 @@
 
         opacity: 0;
         text-decoration: none;
-        transition: opacity 300ms ease, color 125ms ease;
+        transition: opacity 300ms ease, color 125ms ease, font-size 350ms ease;
         color: $c-primary--50;
 
         &:hover {
             color: $c-primary;
+        }
+
+        .active & {
+            color: $c-primary;
+            font-size: 1.25rem;
         }
 
         &.highlighted {

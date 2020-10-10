@@ -37,8 +37,8 @@ class SectionNavigation extends Component {
     this.highlightLink(menuLinks[link]);
   }
 
-  highlightLink = (link) => {
-    link = link.querySelector('.section-navigation__link');
+  highlightLink = (element) => {
+    const link = element.querySelector('.section-navigation__link');
     link.classList.add('highlighted');
     setTimeout(() => { link.classList.remove('highlighted'); }, 1000);
   };
