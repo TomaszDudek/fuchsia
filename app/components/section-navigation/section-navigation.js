@@ -20,7 +20,7 @@ class SectionNavigation extends Component {
         currentActive = current;
         this.makeActive(navigationItems, current);
       }
-    }), 500);
+    }), 100);
     // document.body.addEventListener('scroll', () => {
     //   eslint-disable-next-line max-len
     //   const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - sectionMargin) - 1;
@@ -38,10 +38,18 @@ class SectionNavigation extends Component {
   }
 
   highlightLink = (element) => {
+    this.stopHighlighting();
     const link = element.querySelector('.section-navigation__link');
     link.classList.add('highlighted');
     setTimeout(() => { link.classList.remove('highlighted'); }, 1000);
   };
+
+  stopHighlighting = () => {
+    const links = this.el.querySelectorAll('.highlighted');
+    links.forEach((link) => {
+      link.classList.remove('highlighted');
+    });
+  }
 
   removeActive = (menuLinks, link) => {
     menuLinks[link].classList.remove('active');
