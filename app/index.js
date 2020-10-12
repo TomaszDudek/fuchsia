@@ -4,7 +4,7 @@ import OrderedList from './components/ordered-list/ordered-list';
 import UnOrderedList from './components/unordered-list/unordered-list';
 import Gear from './components/gear/gear';
 import SectionNavigation from './components/section-navigation/section-navigation';
-import ScrollSpy from './components/scroll-spy/scroll-spy.component';
+import YoutubePlayer from './components/youtube-player/youtube-player';
 import './index.scss';
 
 console.log('Fuchsia template is working!');
@@ -15,7 +15,7 @@ const componentLoader = new ComponentLoader({
   UnOrderedList,
   Gear,
   SectionNavigation,
-  ScrollSpy
+  YoutubePlayer
 });
 
 document.addEventListener('DOMContentLoaded', () => {
