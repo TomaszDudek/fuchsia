@@ -1,5 +1,7 @@
 @import './styles/font-face';
+@import '~reset-css';
 @import './styles/common-dependencys';
+@import './styles/reset';
 
 html {
     background-color: fuchsia;
