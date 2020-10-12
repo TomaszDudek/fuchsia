@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const WildcardsEntryWebpackPlugin = require('wildcards-entry-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
@@ -63,6 +64,9 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin({
+      verbose: true
+    }),
     new HtmlWebpackPlugin({template: './app/index.html'}),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
