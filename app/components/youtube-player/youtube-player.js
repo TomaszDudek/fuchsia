@@ -6,7 +6,9 @@ class YoutubePlayer extends Component {
   constructor() {
     super(...arguments);
     const videoId = this.el.dataset.componentVideoid;
-    const ytPlayer = new YouTubePlayer('player');
+    const playerId = this.data.componentId;
+    this.setPlayerId(playerId);
+    const ytPlayer = new YouTubePlayer(playerId);
     const stateNames = {
       '-1': 'unstarted',
       0: 'ended',
@@ -15,8 +17,6 @@ class YoutubePlayer extends Component {
       3: 'buffering',
       5: 'video cued'
     };
-
-    // ytPlayer.loadVideoById('Qp8U_cevJd8');
     ytPlayer.loadVideoById(videoId);
 
     ytPlayer.on('stateChange', _.debounce((event) => {
@@ -24,10 +24,15 @@ class YoutubePlayer extends Component {
         throw new Error(`Unknown state (${event.data}).`);
       }
 
-      console.log(`State: ${stateNames[event.data]} (${event.data}).`);
+      // info: next line is very helpful for debugging player events.
+      // console.log(`State: ${stateNames[event.data]} (${event.data}).`);
 
       this.toggle(event);
     }, 100));
+  }
+
+  setPlayerId(id) {
+    this.el.querySelector('.youtube-player__iframe').setAttribute('id', id);
   }
 
   toggle(event) {
