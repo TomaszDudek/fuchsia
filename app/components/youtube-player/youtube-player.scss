@@ -4,9 +4,27 @@
     @include dev-bg();
 
     height: 0;
-    padding-bottom: 56.25%;
-    position: relative;
+    padding-top: 40%;
     width: 100%;
+    transition: padding-top 500ms ease;
+
+    @include pseudo() {
+        background-color: $c-black--75;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        transition: opacity 500ms ease;
+        pointer-events: none;
+    }
+
+    &--is-playing {
+        padding-top: 56.25%;
+
+        &::after {
+            opacity: 0;
+        }
+    }
 
     &__iframe {
         height: 100%;
