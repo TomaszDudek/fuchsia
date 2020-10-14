@@ -5,10 +5,7 @@ import _ from 'lodash';
 class YoutubePlayer extends Component {
   constructor() {
     super(...arguments);
-    const videoId = this.el.dataset.componentVideoid;
-    const playerId = this.data.componentId;
-    this.setPlayerId(playerId);
-    const ytPlayer = new YouTubePlayer(playerId);
+
     const stateNames = {
       '-1': 'unstarted',
       0: 'ended',
@@ -17,7 +14,14 @@ class YoutubePlayer extends Component {
       3: 'buffering',
       5: 'video cued'
     };
-    ytPlayer.loadVideoById(videoId);
+    const videoId = this.el.dataset.componentVideoid;
+    const playerId = this.data.componentId;
+    this.setPlayerId(playerId);
+    const ytPlayer = new YouTubePlayer(playerId, {
+      videoId,
+      playerVars: { autoplay: 0, controls: 1 },
+      rel: 0
+    });
 
     ytPlayer.on('stateChange', _.debounce((event) => {
       if (!stateNames[event.data]) {
