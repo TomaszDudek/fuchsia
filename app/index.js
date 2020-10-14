@@ -23,3 +23,5 @@ const componentLoader = new ComponentLoader({
 document.addEventListener('DOMContentLoaded', () => {
   componentLoader.scan();
 });
+
+document.addEventListener('touchstart', () => {}, true);

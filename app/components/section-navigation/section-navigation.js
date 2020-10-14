@@ -103,7 +103,7 @@ class SectionNavigation extends Component {
 
   createId = (string) => {
     const id = `${string}`;
-    return id.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+    return id.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase()).split('.').join('');
   };
 
   destroy() {
