@@ -5,6 +5,7 @@ import UnOrderedList from './components/unordered-list/unordered-list';
 import Gear from './components/gear/gear';
 import SectionNavigation from './components/section-navigation/section-navigation';
 import YoutubePlayer from './components/youtube-player/youtube-player';
+import LogoCarpet from './components/logo-carpet/logo-carpet';
 import './index.scss';
 
 console.log('Fuchsia template is working!');
@@ -15,11 +16,10 @@ const componentLoader = new ComponentLoader({
   UnOrderedList,
   Gear,
   SectionNavigation,
-  YoutubePlayer
+  YoutubePlayer,
+  LogoCarpet
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   componentLoader.scan();
 });
-
-console.log('EOF index.js'); // todo: remove

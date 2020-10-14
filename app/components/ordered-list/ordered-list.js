@@ -19,5 +19,3 @@ class OrderedList extends Component {
 }
 
 export default OrderedList;
-
-console.log('EOF ordered-list.js'); // todo: remove
