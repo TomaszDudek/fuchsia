@@ -26,11 +26,14 @@
         justify-content: flex-end;
         margin: 8px 0;
         max-width: 135px;
+        overflow: hidden;
         padding: 0 10px 0 0;
         transition: opacity 200ms ease, padding-top 300ms ease, padding-bottom 300ms ease;
+        width: 20px;
 
         &.active {
             border-right-color: $c-primary;
+            overflow: visible;
         }
     }
 
@@ -39,7 +42,7 @@
 
         opacity: 0;
         text-decoration: none;
-        transition: opacity 300ms ease, color 125ms ease, font-size 350ms ease;
+        transition: opacity 300ms ease, color 125ms ease, font-size 350ms ease, margin 350ms ease;
         color: $c-primary--50;
 
         &:hover {
@@ -49,6 +52,7 @@
         .active & {
             color: $c-primary;
             font-size: 1.25rem;
+            margin: 10px 0;
         }
 
         &.highlighted {
@@ -62,8 +66,10 @@
 
         .section-navigation__item {
             height: auto;
+            overflow: visible;
             padding-bottom: 4px;
             padding-top: 4px;
+            width: auto;
         }
 
         .section-navigation__link {
