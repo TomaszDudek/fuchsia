@@ -1,17 +1,14 @@
 import { Component } from 'component-loader-js';
-import _ from 'lodash';
+import throttle from 'lodash/throttle';
 import { smoothScroll } from '../../scripts/utils/export-star';
 
 class Gear extends Component {
   constructor() {
     super(...arguments);
 
-    document.body.addEventListener('scroll', _.throttle(() => {
+    document.body.addEventListener('scroll', throttle(() => {
       this.rotateCogs();
-    }, 10));
-    // document.body.addEventListener('scroll', () => {
-    //   this.rotateCogs();
-    // });
+    }, 15));
     this.scrollTop();
   }
 

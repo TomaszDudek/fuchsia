@@ -10,7 +10,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const env = process.env.NODE_ENV;
 
 module.exports = {
-  entry: WildcardsEntryWebpackPlugin.entry('./app/components/**/*.component.*', {app: './app/index.js'}),
+  entry: WildcardsEntryWebpackPlugin.entry('./app/components/**/*.component.*', { app: './app/index.js' }),
 
   mode: env,
 
@@ -24,7 +24,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: 3500,
-    hot: true,
+    hot: true
   },
 
   module: {
@@ -35,17 +35,17 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          env === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader',
+          'sass-loader'
         ]
       },
       {
@@ -58,8 +58,8 @@ module.exports = {
         test: /\.(jpg|png)$/,
         use: {
           loader: 'file-loader'
-        },
-      },
+        }
+      }
     ]
   },
 
@@ -67,13 +67,13 @@ module.exports = {
     new CleanWebpackPlugin({
       verbose: true
     }),
-    new HtmlWebpackPlugin({template: './app/index.html'}),
+    new HtmlWebpackPlugin({ template: './app/index.html' }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new FaviconsWebpackPlugin('./app/assets/favicon.svg'),
     new SVGSpritemapPlugin('./app/assets/svgs/**/*.svg')

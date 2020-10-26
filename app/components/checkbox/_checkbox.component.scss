@@ -70,7 +70,11 @@ $c-checkbox-background-color--checked--dark-mode: $c-primary--darker;
                 }
             }
 
-            text-shadow: 0 0 3px rgba($c-primary--darker, .5);
+            text-shadow: 0 0 3px rgba($c-primary--darker, .25);
+
+            @include dark-mode {
+                text-shadow: 0 0 3px rgba($c-primary--darker, .5);
+            }
         }
     }
 

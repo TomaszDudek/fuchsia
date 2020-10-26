@@ -1,40 +1,35 @@
 import { Component } from 'component-loader-js';
-import _ from 'lodash';
+import throttle from 'lodash/throttle';
 import { smoothScroll } from '../../scripts/utils/export-star';
 
 class SectionNavigation extends Component {
   constructor() {
     super(...arguments);
-    this.setNavigationItems(this.getTitles());
+    this.titels = this.getTitles();
+    this.setNavigationItems(this.titels);
+    this.sectionMargin = 200;
+    this.currentActive = 0;
 
-    const sectionMargin = 200;
-    let currentActive = 0;
-    const sections = this.getTitles();
-    const navigationItems = document.querySelectorAll('.section-navigation__item');
+    const sections = this.titels;
+    const navigationItems = this.getNavigationItems();
 
-    document.body.addEventListener('scroll', _.throttle(() => {
+    document.body.addEventListener('scroll', throttle(() => {
       // eslint-disable-next-line max-len
-      const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - sectionMargin) - 1;
-      if (current !== currentActive) {
+      const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - this.sectionMargin) - 1;
+      if (current !== this.currentActive) {
         this.removeAllActive(navigationItems, sections);
-        currentActive = current;
+        this.currentActive = current;
         this.makeActive(navigationItems, current);
       }
     }), 100);
-    // document.body.addEventListener('scroll', () => {
-    //   eslint-disable-next-line max-len
-    //   const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - sectionMargin) - 1;
-    //   if (current !== currentActive) {
-    //     this.removeAllActive(navigationItems, sections);
-    //     currentActive = current;
-    //     this.makeActive(navigationItems, current);
-    //   }
-    // });
   }
 
   makeActive = (menuLinks, link) => {
-    menuLinks[link].classList.add('active');
-    this.highlightLink(menuLinks[link]);
+    const item = menuLinks[link];
+    if (item) {
+      item.classList.add('active');
+      this.highlightLink(item);
+    }
   }
 
   highlightLink = (element) => {
@@ -61,9 +56,9 @@ class SectionNavigation extends Component {
     });
   }
 
-  getTitles = () => {
-    return document.getElementsByClassName('page-section__title');
-  }
+  getTitles = () => document.getElementsByClassName('page-section__title');
+
+  getNavigationItems = () => document.querySelectorAll('.section-navigation__item');
 
   setNavigationItems = (items) => {
     const targetList = document.getElementsByClassName('section-navigation__list')[0];

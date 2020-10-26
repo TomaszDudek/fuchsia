@@ -8,8 +8,8 @@ import YoutubePlayer from './components/youtube-player/youtube-player';
 import LogoCarpet from './components/logo-carpet/logo-carpet';
 import './index.scss';
 
-console.log('Fuchsia template is working!');
-console.log(document.querySelectorAll('*').length);
+// console.log('Fuchsia template is working!');
+// console.log(document.querySelectorAll('*').length);
 
 const componentLoader = new ComponentLoader({
   OrderedList,
@@ -24,4 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
   componentLoader.scan();
 });
 
-document.addEventListener('touchstart', () => {}, true);
+document.addEventListener('touchstart', () => {}, { passive: true });

@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-jc-space-between {
+        justify-content: space-between;
+    }
+
+    &-jc-space-around {
+        justify-content: space-around;
+    }
+
+    &-jc-space-evenly {
+        justify-content: space-evenly;
+    }
+}

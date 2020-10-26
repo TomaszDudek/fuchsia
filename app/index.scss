@@ -2,12 +2,13 @@
 @import '~reset-css';
 @import './styles/common-dependencys';
 @import './styles/reset';
+@import './styles/ac';
 
 html {
     background-color: fuchsia;
     scroll-behavior: smooth;
 
-    @media (prefers-color-scheme: dark) {
+    @include dark-mode() {
         background-color: darken(fuchsia, 35%);
     }
 }

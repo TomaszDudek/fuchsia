@@ -10,7 +10,7 @@ class UnOrderedList extends Component {
   }
 
   countChild() {
-    console.log('UL Children: ', this.el.children.length);
+    // console.log('UL Children: ', this.el.children.length);
   }
 
   destroy() {
@@ -19,5 +19,3 @@ class UnOrderedList extends Component {
 }
 
 export default UnOrderedList;
-
-console.log('EOF unordered-list.js'); // todo: remove

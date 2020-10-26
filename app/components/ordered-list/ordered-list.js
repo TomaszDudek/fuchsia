@@ -10,7 +10,7 @@ class OrderedList extends Component {
   }
 
   countChild() {
-    console.log('OL Children: ', this.el.children.length);
+    // console.log('OL Children: ', this.el.children.length);
   }
 
   destroy() {
