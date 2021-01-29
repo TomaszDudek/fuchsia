@@ -21,7 +21,7 @@ class SectionNavigation extends Component {
         this.currentActive = current;
         this.makeActive(navigationItems, current);
       }
-    }), 100);
+    }, 100), { passive: true });
   }
 
   makeActive = (menuLinks, link) => {

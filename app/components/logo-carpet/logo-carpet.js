@@ -66,8 +66,8 @@ class LogoCarpet extends Component {
 
   generateImagePoolAndRemoveContainers() {
     for (let counter = (this.allContainers.length - 1);
-         counter >= this.CONFIG.itemsToShow;
-         counter -= 1) {
+      counter >= this.CONFIG.itemsToShow;
+      counter -= 1) {
       this.imagePool.push(this.allContainers[counter].children[0]);
       this.allContainers[counter].remove();
     }

@@ -1,2 +1,0 @@
-.gear{bottom:-50px;height:100px;position:fixed;right:-50px;width:100px;cursor:pointer}@media (min-width: 1280px){.gear{bottom:-90px;height:200px;right:-90px;width:200px}}.gear__cog{position:absolute;border-radius:.51em}.gear__cog--small{width:30%;height:30%;z-index:3}.gear__cog--medium{width:50%;height:50%;opacity:.5;fill:#f0f;z-index:2}@media (prefers-color-scheme: dark){.gear__cog--medium{fill:#909}}.gear__cog--large{width:100%;height:100%;opacity:.1;z-index:1}.gear__cog .icon{width:100%}
-

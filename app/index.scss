@@ -34,7 +34,7 @@ body {
 }
 
 .h3 {
-    @include font($f-headline-secondary-tertiary);
+    @include font($f-headline-tertiary);
 }
 
 .example-color-list {
@@ -47,7 +47,7 @@ body {
     margin-right: -$item-spacing;
 
     &__item {
-        @include font($f-text-primary--small);
+        @include font($f-text-secondary);
 
         align-items: center;
         border-radius: 2px;

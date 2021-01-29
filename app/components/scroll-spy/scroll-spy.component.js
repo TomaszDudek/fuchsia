@@ -7,7 +7,7 @@ class ScrollSpy extends Component {
     this.el.addEventListener('scroll', (e) => {
       this.publish('scrollSpy::custom::event', e);
       // console.log('published e:', e);
-    });
+    }, { passive: true });
   }
 
   destroy() {

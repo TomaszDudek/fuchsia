@@ -8,7 +8,7 @@ class Gear extends Component {
 
     document.body.addEventListener('scroll', throttle(() => {
       this.rotateCogs();
-    }, 15));
+    }, 15), { passive: true });
     this.scrollTop();
   }
 

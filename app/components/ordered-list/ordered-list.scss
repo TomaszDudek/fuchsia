@@ -1,9 +1,6 @@
 @import './app/styles/common-dependencys';
 
 .ordered-list {
-    $text-color: $c-primary;
-
-    color: $c-primary;
     list-style: decimal inside;
     margin-bottom: 1em;
 }

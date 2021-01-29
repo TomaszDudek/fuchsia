@@ -3,19 +3,17 @@ $font-family: 'Nunito', sans-serif;
 $f-headline-primary: (
     default: (
         font-family: $font-family,
-        font-size: 1.875rem,
+        font-size: 30px,
         font-weight: normal,
-        line-height: 2.5rem,
-        margin-bottom: .25em,
-        margin-top: .5em,
+        line-height: 40px,
     ),
     $bp-tablet-portrait-min: (
-        font-size: 2.5rem,
-        line-height: 3.125rem,
+        font-size: 40px,
+        line-height: 50px,
     ),
     $bp-desktop-small-min: (
-        font-size: 4.125rem,
-        line-height: 4.5rem,
+        font-size: 66px,
+        line-height: 72px,
     )
 );
 
@@ -25,8 +23,6 @@ $f-headline-secondary: (
         font-size: 30px,
         font-weight: normal,
         line-height: 40px,
-        margin-bottom: .25em,
-        margin-top: .5em,
     ),
     $bp-tablet-portrait-min: (
         font-size: 40px,
@@ -34,18 +30,16 @@ $f-headline-secondary: (
     ),
     $bp-desktop-small-min: (
         font-size: 50px,
-        line-height: 1.5em,
+        line-height: 1.5,
     )
 );
 
-$f-headline-secondary-tertiary: (
+$f-headline-tertiary: (
     default: (
         font-family: $font-family,
         font-size: 27px,
         font-weight: normal,
-        line-height: 1.3em,
-        margin-bottom: .25em,
-        margin-top: .5em,
+        line-height: 1.3,
     ),
     $bp-tablet-portrait-min: (
         font-size: 29px,
@@ -58,34 +52,36 @@ $f-headline-secondary-tertiary: (
 $f-text-primary: (
     default: (
         font-family: $font-family,
-        font-size: 1rem,
-        line-height: 1.5em,
+        font-size: 16px,
+        line-height: 1.5,
         font-weight: normal,
     ),
     $bp-tablet-portrait-min: (
-        font-size: 1.25rem,
+        font-size: 20px,
     ),
     $bp-desktop-small-min: (
-        font-size: 1.35rem,
-    )
-);
-
-$f-text-primary--small: (
-    default: (
-        font-family: $font-family,
-        font-size: 1rem * .75,
-        line-height: 1.5em,
-        font-weight: normal,
-    ),
-    $bp-tablet-portrait-min: (
-        font-size: 1.25rem * .75,
-    ),
-    $bp-desktop-small-min: (
-        font-size: 1.35rem * .75,
+        font-size: 22px,
     )
 );
 
 $f-text-secondary: (
+    default: (
+        font-family: $font-family,
+        font-size: 12px,
+        line-height: 18px,
+        font-weight: normal,
+    ),
+    $bp-tablet-portrait-min: (
+        font-size: 15px,
+        line-height: 22px,
+    ),
+    $bp-desktop-small-min: (
+        font-size: 17px,
+        line-height: 25px,
+    )
+);
+
+$f-text-tertiary: (
     default: (
         font-family: $font-family,
         font-size: 1rem,
