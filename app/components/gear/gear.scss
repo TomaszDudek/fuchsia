@@ -29,7 +29,6 @@ $pull-right-bottom--bp-desktop-small-min: -90px;
             width: 30%;
             height: 30%;
             z-index: 3;
-            //transition: transform 400ms ease-out;
         }
 
         &--medium {
@@ -38,7 +37,6 @@ $pull-right-bottom--bp-desktop-small-min: -90px;
             opacity: .5;
             fill: $c-primary;
             z-index: 2;
-            //transition: transform 300ms ease-out;
 
             @include dark-mode {
                 fill: $c-primary--darker;
@@ -50,10 +48,10 @@ $pull-right-bottom--bp-desktop-small-min: -90px;
             height: 100%;
             opacity: .1;
             z-index: 1;
-            // transition: transform 200ms ease-out;
         }
 
         .icon {
+            height: auto;
             width: 100%;
         }
     }

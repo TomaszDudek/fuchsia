@@ -1,0 +1,52 @@
+@import './app/styles/common-dependencys';
+
+// todo: think about a mixin to create this structures for dark mode.
+body {
+    --stage-background: linear-gradient(to right bottom, #{$c-white} 50%, #{$c-gray--lighter} 50%);
+    --stage-border: 1px solid #{$c-primary};
+}
+
+body.dark-theme {
+    --stage-background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
+    --stage-border: 1px solid #{$c-primary--dark};
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --stage-background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
+        --stage-border: 1px solid #{$c-primary--dark};
+    }
+
+    body.light-theme {
+        --stage-background: linear-gradient(to right bottom, #{$c-white} 50%, #{$c-gray--lighter} 50%);
+        --stage-border: 1px solid #{$c-primary};
+    }
+}
+
+@mixin dark-theme() {
+
+}
+
+.stage {
+    align-items: center;
+    background: var(--stage-background);
+    border: var(--stage-border);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+
+    &__logo {
+        height: auto;
+        width: 70vw;
+
+        @include breakpoint( (orientation landscape) $bp-phone-landscape-min) {
+            width: 70vh;
+        }
+
+        @include breakpoint($bp-desktop-large-min) {
+            width: 40vw;
+        }
+    }
+}

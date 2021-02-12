@@ -1,4 +1,7 @@
+@import './app/styles/common-dependencys';
+
 .icon {
-    height: auto;
-    width: 128px;
+    fill: $c-gray--light;
+    height: 30px;
+    width: 30px;
 }

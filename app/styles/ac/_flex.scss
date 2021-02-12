@@ -3,6 +3,11 @@
 
     &-wrap {
         flex-wrap: wrap;
+
+        &::after {
+            content: '';
+            flex: auto;
+        }
     }
 
     &-jc-space-between {

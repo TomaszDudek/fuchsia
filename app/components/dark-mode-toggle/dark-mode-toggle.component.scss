@@ -1,0 +1,34 @@
+@import './app/styles/common-dependencys';
+
+$dark-mode-toggle-button-icon-color: $c-primary;
+
+$dark-mode-toggle-button-size: 55px;
+$dark-mode-toggle-button-icon-size: 25px;
+
+.dark-mode-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &__button {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: $dark-mode-toggle-button-size;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: $dark-mode-toggle-button-size;
+    }
+
+    &__button-icon {
+        fill: $dark-mode-toggle-button-icon-color;
+        height: $dark-mode-toggle-button-icon-size;
+        width: $dark-mode-toggle-button-icon-size;
+
+        svg {
+            height: $dark-mode-toggle-button-icon-size;
+            width: $dark-mode-toggle-button-icon-size;
+        }
+    }
+}
