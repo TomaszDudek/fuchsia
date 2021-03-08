@@ -7,7 +7,8 @@ import SectionNavigation from './components/section-navigation/section-navigatio
 import YoutubePlayer from './components/youtube-player/youtube-player';
 import LogoCarpet from './components/logo-carpet/logo-carpet';
 import './index.scss';
-import DarkModeToggleComponent from "./components/dark-mode-toggle/dark-mode-toggle.component";
+import DarkModeToggleComponent from './components/dark-mode-toggle/dark-mode-toggle.component';
+import NavigationComponent from './components/navigation/navigation.component';
 
 // console.log('Fuchsia template is working!');
 // console.log(document.querySelectorAll('*').length);
@@ -19,7 +20,8 @@ const componentLoader = new ComponentLoader({
   SectionNavigation,
   YoutubePlayer,
   LogoCarpet,
-  DarkModeToggleComponent
+  DarkModeToggleComponent,
+  NavigationComponent
 });
 
 document.addEventListener('DOMContentLoaded', () => {

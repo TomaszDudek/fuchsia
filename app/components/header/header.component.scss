@@ -1,0 +1,55 @@
+@import './app/styles/common-dependencys';
+
+body {
+    --header-background: #{$c-white--85};
+    --header-box-shadow: #{$c-black--15};
+}
+
+body.dark-theme {
+    --header-background: #{$c-black--85};
+    --header-box-shadow: #{$c-primary--15};
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --header-background: #{$c-black--85};
+        --header-box-shadow: #{$c-primary--15};
+    }
+
+    body.light-theme {
+        --header-background: #{$c-white--85};
+        --header-box-shadow: #{$c-black--15};
+    }
+}
+
+.header {
+    backface-visibility: hidden;
+    background-color: var(--header-background);
+    box-shadow: var(--header-box-shadow) 0 1px 6px;
+    height: 72px;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+    z-index: 999;
+
+    &__container {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        padding: 0 20px;
+    }
+
+    &__space {
+        margin: 0 auto;
+    }
+
+    &__logo {
+        // todo: create logo font!
+        text-transform: uppercase;
+        color: fuchsia;
+    }
+}

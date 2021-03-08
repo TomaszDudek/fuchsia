@@ -1,17 +1,37 @@
 @import './app/styles/common-dependencys';
 
-$dark-mode-toggle-button-icon-color: $c-primary;
+$dark-mode-toggle-button-icon-color: $c-gray--light;
+$dark-mode-toggle-button-icon-color--dark-theme: $c-primary;
 
 $dark-mode-toggle-button-size: 55px;
 $dark-mode-toggle-button-icon-size: 25px;
 
+body {
+    --icon-fill: #{$dark-mode-toggle-button-icon-color};
+}
+
+body.dark-theme {
+    --icon-fill: #{$dark-mode-toggle-button-icon-color--dark-theme};
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --icon-fill: #{$dark-mode-toggle-button-icon-color--dark-theme};
+    }
+
+    body.light-theme {
+        --icon-fill: #{$dark-mode-toggle-button-icon-color};
+    }
+}
+
 .dark-mode-toggle {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
 
     &__button {
         align-items: center;
+        appearance: none;
+        background: transparent;
+        border: none;
         cursor: pointer;
         display: flex;
         height: $dark-mode-toggle-button-size;
@@ -22,7 +42,7 @@ $dark-mode-toggle-button-icon-size: 25px;
     }
 
     &__button-icon {
-        fill: $dark-mode-toggle-button-icon-color;
+        fill: var(--icon-fill);
         height: $dark-mode-toggle-button-icon-size;
         width: $dark-mode-toggle-button-icon-size;
 

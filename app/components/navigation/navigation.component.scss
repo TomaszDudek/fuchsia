@@ -1,0 +1,149 @@
+@import './app/styles/common-dependencys';
+
+.navigation {
+    $navigation-button-size: 50px;
+    $navigation-breakpoint: $bp-desktop-small-min;
+
+    align-items: center;
+    display: flex;
+
+    &__container {
+        display: none;
+
+        @include breakpoint($navigation-breakpoint) {
+            position: relative;
+            display: block;
+            margin-right: 1em;
+        }
+
+        &--is-open {
+            display: block;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &__random-action-container {
+        display: flex;
+    }
+
+    &__list {
+        animation: .6s ease 0s 1 normal both running open-menu;
+        background: $c-black--85;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 100px 20px;
+        width: 100%;
+
+        @include breakpoint($navigation-breakpoint) {
+            animation: none;
+            background-color: transparent;
+            flex-direction: row;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        animation: .5s ease .3s 1 normal both running slide-up;
+        margin-bottom: .75em;
+
+        &:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: .5s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: .6s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: .7s;
+        }
+
+        @include breakpoint($navigation-breakpoint) {
+            animation: none;
+            margin-bottom: 0;
+            margin-right: 1em;
+        }
+    }
+
+    &__link {
+        // todo: create font style for menu links
+        color: $c-primary;
+        display: block;
+        text-align: center;
+    }
+
+    &__button {
+        align-items: center;
+        appearance: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        height: $navigation-button-size;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: $navigation-button-size;
+
+        @include breakpoint($navigation-breakpoint) {
+            display: none;
+        }
+
+        &--close {
+            animation: .5s cubic-bezier(.68, -.55, .27, 1.55) .5s 1 normal both running blob-up;
+            position: fixed;
+            right: 20px;
+            top: 10px;
+        }
+    }
+}
+
+@keyframes open-menu {
+    from {
+        background-color: $c-white--85;
+        clip-path: circle(50px at 94.75% 8.5%);
+        opacity: .5;
+    }
+
+    to {
+        background: $c-black--85;
+        clip-path: circle(150vmax at 94.75% 8.5%);
+        opacity: 1;
+    }
+}
+
+@keyframes blob-up {
+    from {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

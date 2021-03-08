@@ -14,17 +14,48 @@
 </head>
 
 <body id="body">
-<header class="stage">
+
+<header class="header">
+    <div class="header__container">
+        <a href="/" class="header__logo">Fuchsia Muster</a>
+        <div class="header__space"></div>
+        <nav class="header__navigation navigation" data-component="NavigationComponent">
+            <div id="navigationContainer" class="navigation__container">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="/" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="/" class="navigation__link">Service</a></li>
+                    <li class="navigation__item"><a href="/" class="navigation__link">Plan</a></li>
+                    <li class="navigation__item"><a href="/" class="navigation__link">Blog</a></li>
+                    <li class="navigation__item"><a href="/" class="navigation__link">Contact</a></li>
+                </ul>
+                <button id="navigationButtonClose" class="navigation__button navigation__button--close" aria-label="Close navigation">
+                    <svg class="icon">
+                        <use xlink:href="#sprite-close-line"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="navigation__random-action-container">
+                <div class="dark-mode-toggle" data-component="DarkModeToggleComponent">
+                    <button type="button" class="dark-mode-toggle__button" aria-label="toggle dark mode">
+                        <svg class="dark-mode-toggle__button-icon">
+                            <use xlink:href="#sprite-alarm-warning-line"></use>
+                        </svg></button>
+                </div>
+            </div>
+            <button id="navigationButtonOpen" class="navigation__button navigation__button--open" aria-label="Open navigation">
+                <svg class="icon">
+                    <use xlink:href="#sprite-burger-menu"></use>
+                </svg>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<section class="stage">
     <svg class="stage__logo" viewBox="0 0 872 780">
         <use xlink:href="#sprite-fuchsia-muster-logo-rc1"></use>
     </svg>
-    <div class="dark-mode-toggle" data-component="DarkModeToggleComponent">
-        <button type="button" class="dark-mode-toggle__button" aria-label="toggle dark mode">
-        <svg class="dark-mode-toggle__button-icon">
-            <use xlink:href="#sprite-alarm-warning-line"></use>
-        </svg></button>
-    </div>
-</header>
+</section>
 
 <section class="page-section page-section--medium">
     <div class="container">
@@ -358,6 +389,9 @@
             <use xlink:href="#sprite-arrow-up-s-line"></use>
         </svg>
         <svg class="icon">
+            <use xlink:href="#sprite-burger-menu"></use>
+        </svg>
+        <svg class="icon">
             <use xlink:href="#sprite-check-double-line"></use>
         </svg>
         <svg class="icon">
@@ -410,6 +444,120 @@
         </svg>
         <svg class="icon">
             <use xlink:href="#sprite-delete-bin-5-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-settings-6-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-settings-6-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-settings-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-box-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-circle-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-forward-2-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-forward-box-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-forward-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-share-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-check-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-cross-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-flash-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-keyhole-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-star-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-shield-user-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-side-bar-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-spam-2-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-spam-3-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-spam-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-star-half-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-star-half-s-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-star-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-star-s-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-subtract-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-thumb-down-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-thumb-up-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-time-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-timer-2-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-timer-flash-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-timer-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-toggle-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-upload-2-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-upload-cloud-2-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-upload-cloud-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-upload-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-zoom-in-line"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#sprite-zoom-out-line"></use>
         </svg>
     </div>
 </section>

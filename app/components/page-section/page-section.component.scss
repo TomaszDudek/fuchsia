@@ -2,7 +2,7 @@
 
 .page-section {
     $decorative-background-color: $c-gray--15;
-    $decroative-priamry-background-color: $c-primary--15;
+    $decorative-primary-background-color: $c-primary--15;
 
     @include clearfix;
 
@@ -13,7 +13,7 @@
     }
 
     &--decroative-primary {
-        background-color: $decroative-priamry-background-color;
+        background-color: $decorative-primary-background-color;
     }
 
     &--decorative-image {
