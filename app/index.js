@@ -1,9 +1,7 @@
 /* eslint-env browser */
 import './index.scss';
-import ScrollSpy from './components/scroll-spy/scroll-spy.component';
 import ComponentLoader from 'component-loader-js';
-import OrderedList from './components/ordered-list/ordered-list';
-import UnOrderedList from './components/unordered-list/unordered-list';
+import ScrollSpy from './components/scroll-spy/scroll-spy.component';
 import Gear from './components/gear/gear';
 import SectionNavigation from './components/section-navigation/section-navigation';
 import YoutubePlayer from './components/youtube-player/youtube-player';
@@ -17,15 +15,13 @@ import Header from './components/header/header.component';
 
 const componentLoader = new ComponentLoader({
   ScrollSpy,
-  OrderedList,
-  UnOrderedList,
+  Header,
+  Navigation,
+  DarkModeToggleComponent,
   Gear,
   SectionNavigation,
-  YoutubePlayer,
   LogoCarpet,
-  DarkModeToggleComponent,
-  Navigation,
-  Header
+  YoutubePlayer
 });
 
 document.addEventListener('DOMContentLoaded', () => {
