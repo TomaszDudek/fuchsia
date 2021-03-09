@@ -6,9 +6,12 @@ class Gear extends Component {
   constructor() {
     super(...arguments);
 
-    document.body.addEventListener('scroll', throttle(() => {
+    // document.body.addEventListener('scroll', throttle(() => {
+    //   this.rotateCogs();
+    // }, 15), { passive: true });
+    this.subscribe('scrollSpy::scroll::event', () => {
       this.rotateCogs();
-    }, 15), { passive: true });
+    });
     this.scrollTop();
   }
 

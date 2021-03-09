@@ -1,5 +1,7 @@
 @import './app/styles/common-dependencys';
 
+$header-breakpoint: $bp-tablet-portrait-min;
+
 body {
     --header-background: #{$c-white--85};
     --header-box-shadow: #{$c-black--15};
@@ -32,9 +34,24 @@ body.dark-theme {
     position: fixed;
     right: 0;
     top: 0;
+    transition: transform .4s cubic-bezier(.94, .06, .32, .95) 0s, background .2s ease 0s, color .2s ease 0s, height .2s ease 0s;
     visibility: visible;
     width: 100%;
     z-index: 999;
+
+    @include breakpoint($header-breakpoint) {
+        height: 100px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &--is-sticky {
+        @include breakpoint($header-breakpoint) {
+            height: 72px;
+            background-color: var(--header-background);
+            box-shadow: var(--header-box-shadow) 0 1px 6px;
+        }
+    }
 
     &__container {
         align-items: center;
