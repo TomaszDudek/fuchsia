@@ -1,5 +1,5 @@
 import { Component } from 'component-loader-js';
-import throttle from 'lodash/throttle';
+// import throttle from 'lodash/throttle';
 import { smoothScroll } from '../../scripts/utils/export-star';
 
 class SectionNavigation extends Component {
@@ -13,7 +13,17 @@ class SectionNavigation extends Component {
     const sections = this.titels;
     const navigationItems = this.getNavigationItems();
 
-    document.body.addEventListener('scroll', throttle(() => {
+    // document.body.addEventListener('scroll', throttle(() => {
+    // eslint-disable-next-line max-len
+    //   const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - this.sectionMargin) - 1;
+    //   if (current !== this.currentActive) {
+    //     this.removeAllActive(navigationItems, sections);
+    //     this.currentActive = current;
+    //     this.makeActive(navigationItems, current);
+    //   }
+    // }, 100), { passive: true });
+
+    this.subscribe('scrollSpy::scroll::event', () => {
       // eslint-disable-next-line max-len
       const current = sections.length - [...sections].reverse().findIndex((section) => document.body.scrollTop >= section.offsetTop - this.sectionMargin) - 1;
       if (current !== this.currentActive) {
@@ -21,7 +31,7 @@ class SectionNavigation extends Component {
         this.currentActive = current;
         this.makeActive(navigationItems, current);
       }
-    }, 100), { passive: true });
+    });
   }
 
   makeActive = (menuLinks, link) => {

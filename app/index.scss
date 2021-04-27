@@ -1,12 +1,37 @@
-@import './styles/font-face';
 @import '~reset-css';
+@import './styles/font-face';
 @import './styles/common-dependencys';
 @import './styles/reset';
 @import './styles/ac';
 
+body {
+    --background-color: #{$c-white};
+    --text-color: #{$c-black};
+    --icon-color: #{$c-black};
+}
+
+body.dark-theme {
+    --background-color: #{darken($c-white, 90%)};
+    --text-color: #{lighten($c-black, 90%)};
+    --icon-color: #{lighten($c-black, 90%)};
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: #{darken($c-white, 90%)};
+        --text-color: #{lighten($c-black, 90%)};
+        --icon-color: #{lighten($c-black, 90%)};
+    }
+
+    body.light-theme {
+        --background-color: #{$c-white};
+        --text-color: #{$c-black};
+        --icon-color: #{$c-black};
+    }
+}
+
 html {
     background-color: fuchsia;
-    scroll-behavior: smooth;
 
     @include dark-mode() {
         background-color: darken(fuchsia, 35%);
@@ -14,15 +39,9 @@ html {
 }
 
 body {
-    background-color: white;
-    color: black;
-    fill: black;
-
-    @media (prefers-color-scheme: dark) {
-        background-color: darken(white, 90%);
-        color: lighten(black, 90%);
-        fill: lighten(black, 90%);
-    }
+    background-color: var(--background-color);
+    color: var(--text-color);
+    fill: var(--icon-color);
 }
 
 .h1 {
@@ -58,6 +77,7 @@ body {
         justify-content: center;
         margin: $item-spacing;
         min-height: 3rem;
+        padding: .5em;
         white-space: nowrap;
 
         &--black {
@@ -235,6 +255,16 @@ body {
 
         &--secondary-darker {
             background-color: $c-secondary--darker;
+        }
+    }
+}
+
+.example-icon-list {
+    .icon {
+        margin: .5em;
+
+        @include breakpoint($bp-desktop-small-min) {
+            margin: 1em;
         }
     }
 }

@@ -65,8 +65,8 @@ body.dark-theme {
     }
 
     &__logo {
-        // todo: create logo font!
-        text-transform: uppercase;
+        @include font($f-logo);
+
         color: fuchsia;
     }
 }
