@@ -1,0 +1,43 @@
+@import './app/styles/common-dependencys';
+$select-padding: 1em;
+
+.drop-down {
+    margin-bottom: calc(3vh + 1vw);
+
+    &__label {
+        @include font($f-input-label);
+
+        cursor: pointer;
+        display: block;
+        margin-bottom: .25em;
+        padding-left: .125em;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: auto;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__input {
+        @include font($f-text-primary);
+
+        appearance: none;
+        border-radius: 2px;
+        border: 1px solid black;
+        display: block;
+        opacity: 1;
+        padding: $select-padding;
+        width: 100%;
+
+        &[data-native="true"] {
+            background-color: fuchsia;
+        }
+    }
+}

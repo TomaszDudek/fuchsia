@@ -683,7 +683,7 @@
     </div>
 </section>
 
-<section class="page-section page-section--medium">
+<section class="page-section page-section--medium page-section--decorative">
     <div class="container">
         <div class="page-section__header">
             <h2 class="page-section__title h2">Response states</h2>
@@ -725,6 +725,42 @@
         <div class="checkbox checkbox--has-error">
             <input class="checkbox__input" type="checkbox" id="input_checkbox_32">
             <label class="checkbox__label" for="input_checkbox_32">Checkbox label</label>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--medium">
+    <div class="container">
+        <div class="page-section__header">
+            <h2 class="page-section__title h2">Dropdown</h2>
+
+            <div class="drop-down" data-component="Dropdown">
+                <label for="select_1" class="drop-down__label">Dropdown Label</label>
+                <div class="drop-down__wrapper">
+                    <svg class="icon drop-down__icon">
+                        <use xlink:href="#sprite-arrow-down-s-line"></use>
+                    </svg>
+                    <select name="select" id="select_1" class="drop-down__input" data-native="true">
+                        <option>value 1</option>
+                        <option>value 2</option>
+                        <option>value 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="drop-down" data-component="Dropdown">
+                <label for="select_2" class="drop-down__label">Dropdown Label</label>
+                <div class="drop-down__wrapper">
+                    <svg class="icon drop-down__icon">
+                        <use xlink:href="#sprite-arrow-down-s-line"></use>
+                    </svg>
+                    <select name="select" id="select_2" class="drop-down__input" data-native="false">
+                        <option>value 1</option>
+                        <option>value 2</option>
+                        <option>value 3</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 </section>

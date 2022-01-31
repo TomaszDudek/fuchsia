@@ -9,6 +9,7 @@ import LogoCarpet from './components/logo-carpet/logo-carpet';
 import DarkModeToggleComponent from './components/dark-mode-toggle/dark-mode-toggle.component';
 import Navigation from './components/navigation/navigation.component';
 import Header from './components/header/header.component';
+import Dropdown from './components/drop-down/drop-down.component';
 
 // console.log('Fuchsia template is working!');
 // console.log(document.querySelectorAll('*').length);
@@ -21,7 +22,8 @@ const componentLoader = new ComponentLoader({
   Gear,
   SectionNavigation,
   LogoCarpet,
-  YoutubePlayer
+  YoutubePlayer,
+  Dropdown,
 });
 
 document.addEventListener('DOMContentLoaded', () => {
