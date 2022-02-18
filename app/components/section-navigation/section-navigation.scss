@@ -44,6 +44,7 @@
         text-decoration: none;
         transition: opacity 300ms ease, color 125ms ease, font-size 350ms ease, margin 350ms ease;
         color: $c-primary--50;
+        white-space: nowrap;
 
         &:hover {
             color: $c-primary;
