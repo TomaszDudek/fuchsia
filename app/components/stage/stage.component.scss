@@ -23,10 +23,6 @@ body.dark-theme {
     }
 }
 
-@mixin dark-theme() {
-
-}
-
 .stage {
     align-items: center;
     background: var(--stage-background);
@@ -43,6 +39,10 @@ body.dark-theme {
 
         @include breakpoint( (orientation landscape) $bp-phone-landscape-min) {
             width: 70vh;
+        }
+
+        @include breakpoint($bp-desktop-small-min) {
+            width: 35vw;
         }
 
         @include breakpoint($bp-desktop-large-min) {
